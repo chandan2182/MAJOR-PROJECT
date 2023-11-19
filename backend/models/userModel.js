@@ -4,8 +4,8 @@ const mySchema = new Schema({
     name : String,
     email : String,
     password : String,
-    age : Number,
-    avatar: String,
+    avatar: { String, default: "avatar place"},
+    createdAt: Date, 
 });
 
 module.exports = model( 'user', mySchema );

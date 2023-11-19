@@ -17,6 +17,7 @@ import CheckOut from './components/user/CheckOut';
 import Manageplace from './components/admin/Manageplace';
 import ManageUser from './components/admin/ManageUser';
 import { AppProvider } from './context/AppContext';
+import Admin from './components/admin';
 
 function App() {
 
@@ -42,7 +43,7 @@ function App() {
             <Route path='checkout' element={<CheckOut/>} />
           </Route>
 
-          <Route path='admin' element={<admin />}>
+          <Route path='admin' element={<Admin />}>
             <Route path='addplace' element={<Addplace />} />
             <Route path='manageplace' element={<Manageplace/>} />
             <Route path='manageuser' element={<ManageUser />} />

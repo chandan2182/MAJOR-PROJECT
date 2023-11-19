@@ -3,6 +3,9 @@ const express = require('express');
 
 const userRouter = require('./routers/userRouter');
  const utilRouter = require('./routers/utils');
+ const placeRouter = require('./routers/placeRouter');
+ const bookingRouter = require('./routers/bookingRouter');
+ const serviceRouter = require('./routers/serviceRouter')
 const cors = require('cors');
 
 // initialize express
@@ -16,6 +19,9 @@ app.use(cors({
 }));
 
 app.use( '/user', userRouter );
+app.use( '/place', placeRouter );
+app.use( '/booking ', placeRouter );
+app.use( '/service', serviceRouter );
  app.use( '/util', utilRouter );
 
 app.use(express.static('/.uploads'));
